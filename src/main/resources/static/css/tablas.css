@@ -1,0 +1,82 @@
+@CHARSET "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2? family = Hachi + Maru + Pop & display = swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+   
+}
+body {
+	background: #24303c;
+}
+
+.table-container{
+	margin-right: 30px;
+	
+
+}
+table{
+	width: 100%;
+	background: white;
+	margin-left: 15px;
+	border-collapse: collapse;
+	text-align: center;
+	box-shadow: 7px 13px 37px #000;
+	cursor: pointer;
+}
+th, td {
+	border: solid 1px #000;
+	text-align: center;
+	
+}
+thead{
+	background: #2BA7F9;
+}
+
+tr:hover td{
+	background: #4e5066;
+	color: #fff;
+	border-top: 1px solid #22262e;
+}
+
+tr, td{
+	height: 50px;
+}
+
+tr:first-child{
+	border-top: none;
+}
+
+tr:last-child{
+	border-bottom: none;
+}
+tr:nth-child(odd) td{
+	background: #ebebeb;
+}
+
+tr:nth-child(odd):hover td{
+	background: #ebebeb;
+	color:#A09F9E; 
+}
+h2{
+	padding: 18px;
+	text-align: center;
+	font-size: 30px;
+	font-family: arial;
+	color: #11101D;
+}
+.btn {
+	text-decoration: none;
+	background: #1E9CF0;
+	padding: 2px;
+	margin: 10px
+}
+.btn-tbl{
+	padding: 5px;
+}
+.btn-tbl a{
+	color: #fff;
+	background: #1f53c5;
+	border-radius: 2px;
+}

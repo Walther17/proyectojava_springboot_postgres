@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista de Citas</title>
+
+
+
+<link rel="stylesheet" href="/css/tablas.css">
+<link rel="stylesheet" href="/css/sidebar.css">
+<link rel="stylesheet" href="/css/style.css">
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/79b2fa2c25.js" crossorigin="anonymous"></script>
+<link rel="icon" type="image/jpg" href="/images/olim.jpeg"></link>
+
+
+</head>
+<body>
+
+
+	<div class="sidebar">
+		<div class="logo-details">
+			<div class="logo_name">
+				</span><span class="tab-text">Olimac Services</span>
+			</div>
+			<i class='bx bx-menu' id="btn"></i>
+		</div>
+		<ul class="nav-list">
+			<li><i class='bx bx-search'></i> <input type="text"
+				placeholder="Search..."> <span class="tooltip">Search</span>
+			</li>
+
+
+
+		<li><a th:href="@{/agregarCliente}" href="#"> <i class='bx bx-user-plus'></i>
+			 <span class="links_name">Agregar Cliente</span>
+			</a> <span class="tooltip">Agregar Cliente</span></li>
+
+
+			<li><a th:href="@{/listar}" href="#"> <i class='bx bx-list-check' ></i>
+					<span class="links_name">Lista de Clientes</span>
+			</a> <span class="tooltip">Lista de Clientes</span></li>
+
+
+
+
+			<li><a th:href="@{/agregarCita}" href="#"> <i class='bx bx-user-plus'></i>
+			<span class="links_name">Agregar Citas</span>
+			</a> <span class="tooltip">Agregar Citas</span></li>
+
+
+			<li><a th:href="@{/listaCitas}" href="#"><i class='bx bx-list-check' ></i>
+			 <span class="links_name">Lista de
+						Citas</span>
+			</a> <span class="tooltip">Lista de Citas</span></li>
+			
+			<li><a th:href="@{/listaCitas2}" href="#"> <i class='bx bx-edit-alt'></i> <span class="links_name">Editar
+						Citas</span>
+			</a> <span class="tooltip">Editar Citas</span></li>
+
+
+
+
+
+
+           <li class="profile">
+				<div class="profile-details">
+					<img src="/images/userxd.jpg" alt="profileImg">
+					<div class="name_job">
+						<div class="name">Adminstrador</div>
+						<div class="job">Walther Olivo</div>
+					</div>
+				</div> 
+				
+			 <a class="icono-log" th:href="@{/login}"><i class='bx bx-log-out' id="log_out"></i></a>
+				
+				
+			</li>
+
+
+
+
+		</ul>
+	</div>
+
+	<script src="/js/script.js"></script>
+
+
+<section class="home-section">
+
+
+	<h2>Tabla de Citas </h2>
+	
+	<div class="table-container">
+	<table>
+		<thead>
+			<tr>
+
+				<th>Id de la cita</th>
+				<th>Nombre del Paciente</th>
+				<th>Observacion de la cita</th>
+				<th>Fecha de la cita</th>
+	 			<th>Fecha de  aviso</th>
+				<th>....</th>
+				
+
+
+
+
+			</tr>
+
+		</thead>
+
+		<tbody>
+
+			<tr th:each="cita:${cita}">
+
+				<td th:text="${cita.idCita}"></td>
+				
+				<td th:text="${cita.idCliente.toString()}"></td>
+
+				<td th:text="${cita.observacion}"></td>
+
+				
+				<td th:text="${cita.fechaCita}"></td>
+				<td th:text="${cita.fechaAviso}"></td>
+
+
+                <td>
+                
+                <div class="btn-tbl"><a class="btn" th:href="@{/editarCita/}+${cita.idCita}">Editar</a></div>
+					
+				<div class="btn-tbl"><a class="btn" th:href="@{/eliminarCita/}+${cita.idCita}">Eliminar</a></div>
+                
+                </td>
+                
+				
+
+			</tr>
+
+
+
+		</tbody>
+
+	</table>
+	</div>
+	</section>
+
+</body>
+</html>

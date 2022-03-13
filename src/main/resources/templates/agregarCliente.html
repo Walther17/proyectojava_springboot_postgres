@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Agregar Cliente</title>
+
+<link rel="stylesheet" href="/css/forms-clientes.css">
+<link rel="stylesheet" href="/css/sidebar.css">
+<link rel="stylesheet" href="/css/style.css">
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/79b2fa2c25.js" crossorigin="anonymous"></script>
+<link rel="icon" type="image/jpg" href="/images/olim.jpeg"></link>
+
+
+</head>
+<body>
+
+
+	<div class="sidebar">
+		<div class="logo-details">
+			<div class="logo_name">
+				<span class="tab-text">Olimac Services</span>
+			</div>
+			<i class='bx bx-menu' id="btn"></i>
+		</div>
+		<ul class="nav-list">
+			<li><i class='bx bx-search'></i> <input type="text"
+				placeholder="Search..."> <span class="tooltip">Search</span>
+			</li>
+
+
+<li><a th:href="@{/agregarCliente}" href="#"> <i class='bx bx-user-plus'></i>
+			 <span class="links_name">Agregar Cliente</span>
+			</a> <span class="tooltip">Agregar Cliente</span></li>
+
+
+			<li><a th:href="@{/listar}" href="#"> <i class='bx bx-list-check' ></i>
+					<span class="links_name">Lista de Clientes</span>
+			</a> <span class="tooltip">Lista de Clientes</span></li>
+
+
+
+
+			<li><a th:href="@{/agregarCita}" href="#"> <i class='bx bx-user-plus'></i>
+			<span class="links_name">Agregar Citas</span>
+			</a> <span class="tooltip">Agregar Citas</span></li>
+
+
+			<li><a th:href="@{/listaCitas}" href="#"><i class='bx bx-list-check' ></i>
+			 <span class="links_name">Lista de
+						Citas</span>
+			</a> <span class="tooltip">Lista de Citas</span></li>
+			
+          <li><a th:href="@{/listaCitas2}" href="#"> <i class='bx bx-edit-alt'></i> <span class="links_name">Editar
+						Citas</span>
+			</a> <span class="tooltip">Editar Citas</span></li>
+
+			
+			
+
+             <li class="profile">
+				<div class="profile-details">
+					<img src="/images/userxd.jpg" alt="profileImg">
+					<div class="name_job">
+						<div class="name">Adminstrador</div>
+						<div class="job">Walther Olivo</div>
+					</div>
+				</div> 
+				
+			 <a class="icono-log" th:href="@{/login}"><i class='bx bx-log-out' id="log_out"></i></a>
+				
+				
+			</li>
+
+
+		</ul>
+	</div>
+
+	<script src="/js/script.js"></script>
+
+
+	<section class="home-section">
+		
+
+       <div class="container-reg"  >
+       
+		<form th:action="@{/save}" th:object="${cliente}" method="POST">
+			
+			
+			<div class="form">
+			
+			<h4>Formulario de registro de un nuevo cliente</h4>
+
+                
+                
+				<input class="controls" required="required" type="text" th:field="*{nombres}" placeholder="nombres"><br>
+
+				<input class="controls" required="required" type="text" th:field="*{apellidos}" placeholder="apellidos"><br>
+
+				<input class="controls" required="required" type="text" th:field="*{direccion}" placeholder="direccion"><br>
+
+				<input class="controls" required="required" type="text" th:field="*{telefono}" placeholder="telefono"><br>
+
+				<input class="controls" required="required" type="text" th:field="*{cedulaCliente}" placeholder="ci"><br>
+
+				<input class="controls" required="required" type="text" th:field="*{genero}" placeholder="genero"><br>
+
+				<input class="controls" required="required" type="email" th:field="*{email}" placeholder="email"><br>
+
+				<input class="controls" required="required" type="date" th:field="*{fechaRegistro}"><br>
+				
+				 <input class="botons" type="submit" value="ok">
+
+			</div>
+
+		</form>
+		</div>
+		
+		 </section>
+</body>
+</html>

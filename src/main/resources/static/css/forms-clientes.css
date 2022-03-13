@@ -1,0 +1,54 @@
+@CHARSET "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2? family = Hachi + Maru + Pop & display = swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+	background: #24303c;
+}
+
+.container-reg {
+	background: #24303c;
+	color: white;
+	height: 2000px;
+	
+	
+}
+
+.form {
+    margin-top: 20px;
+	width: 550px;
+	background: #24303c;
+	padding: 30px;
+	margin-left: 100px;
+	border-radius: 4px;
+	font-family: 'calibri';
+	color: white;
+	box-shadow: 7px 13px 37px #000;
+	margin-top: 40px;
+	padding-top: 40px;
+}
+
+.form h4 {
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.form .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+    cursor: pointer;
+  
+}
+.table-container{
+	background: #24303c;
+}
